@@ -50,7 +50,8 @@ create table demo.flight_features(
 
 ```
 cqlsh "node-0.aws_us_east_1.********.clusters.scylla.cloud" 9042 -u scylla -p "***********"
-COPY demo.flight_features FROM 'flight_dataset.csv';
+
+scylla@cqlsh> COPY demo.flight_features FROM 'flight_dataset.csv';
 ```
 
 This will start ingesting data into your ScyllaDB instance:
