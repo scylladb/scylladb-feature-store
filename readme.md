@@ -116,6 +116,25 @@ df = rows._current_rows
 ```
 
 Split the dataset into features and target variable:
+Feature attributes:
+* `actual_elapsed_time`
+* `air_time`
+* `arr_time`
+* `crs_arr_time` 
+* `crs_dep_time`
+* `crs_elapsed_time` 
+* `dep_time` 
+* `distance` 
+* `taxi_in` 
+* `taxi_out`
+* `wheels_off`
+* `wheels_on`
+* `arr_delay`
+
+Target attribute:
+* `dep_delay`
+
+
 ```python
 #Features
 feature_cols = ["actual_elapsed_time", "air_time", 
@@ -161,20 +180,5 @@ graph = pydotplus.graph_from_dot_data(dot_data.getvalue())
 graph.write_png('flight_delayed.png')
 Image(graph.create_png())
 ```
-
-Select attributes:
-* `actual_elapsed_time`
-* `air_time`
-* `arr_time`
-* `crs_arr_time` 
-* `crs_dep_time`
-* `crs_elapsed_time` 
-* `dep_time` 
-* `distance` 
-* `taxi_in` 
-* `taxi_out`
-* `wheels_off`
-* `wheels_on`
-* `arr_delay`
 
 
