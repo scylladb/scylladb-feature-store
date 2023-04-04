@@ -3,6 +3,19 @@ This example project demonstrates a machine learning feature store use case for 
 
 You'll set up a database with flight data and use ScyllaDB to analyze flight delays.
 
+# What is a feature store and ScyllaDB plays a role in it?
+A feature store is a bla bla
+
+[![](https://mermaid.ink/img/pako:eNptkD1uwzAMha9CaOhkX8BDgTZutqBAkqm2B0KibaH6MSQ6RRDn7mXttkNRTdTj-6gn3pSOhlSlehc_9IiJ4Vy3AeQ8NeeEIfcxeTLwADgMiQZkuRhk7KAsH2GzLrUIYMNAmW0MC-ya1-BsIMgcEw4EJZz01Tmsn6HbmN3KL3tiPQIntEH4dXImXqBuDhLM_Xb-o3pCnhPBhbQ8kxd4-YYypctfZt8cCV3J1hPgNOVOFcpT8miNfP_2ZW0Vj-SpVZWUBtN7q9pwFx_OHE_XoFXFaaZCzZPkpNrikNCrqkeXRSVjJcZh2-e61kJNGN5i_PHcPwFe4npo?type=png)](https://mermaid.live/edit#pako:eNptkD1uwzAMha9CaOhkX8BDgTZutqBAkqm2B0KibaH6MSQ6RRDn7mXttkNRTdTj-6gn3pSOhlSlehc_9IiJ4Vy3AeQ8NeeEIfcxeTLwADgMiQZkuRhk7KAsH2GzLrUIYMNAmW0MC-ya1-BsIMgcEw4EJZz01Tmsn6HbmN3KL3tiPQIntEH4dXImXqBuDhLM_Xb-o3pCnhPBhbQ8kxd4-YYypctfZt8cCV3J1hPgNOVOFcpT8miNfP_2ZW0Vj-SpVZWUBtN7q9pwFx_OHE_XoFXFaaZCzZPkpNrikNCrqkeXRSVjJcZh2-e61kJNGN5i_PHcPwFe4npo)
+
+
+# Feature store storage options
+
+* low-latency high-performance database: online storage
+* cheap database for historical retention: offline storage
+
+
+ScyllaDB is a proper choice as an online storage.
 
 # Get started
 
