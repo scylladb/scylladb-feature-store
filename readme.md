@@ -1,7 +1,7 @@
 # ScyllaDB feature store example (online storage)
 This example project demonstrates a machine learning feature store use case for ScyllaDB.
 
-You'll set up a database with flight data and use ScyllaDB to analyze flgiht delays.
+You'll set up a database with flight data and use ScyllaDB to analyze flight delays.
 
 
 # Get started
