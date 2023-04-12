@@ -3,22 +3,48 @@ This example project demonstrates a machine learning feature store use case for 
 
 You'll set up a database with flight data and use ScyllaDB to analyze flight delays.
 
-# What is a feature store and how ScyllaDB plays a role in it?
+# What is a feature store?
 
 [![](https://mermaid.ink/img/pako:eNptkD1uwzAMha9CaOhkX8BDgTZutqBAkqm2B0KibaH6MSQ6RRDn7mXttkNRTdTj-6gn3pSOhlSlehc_9IiJ4Vy3AeQ8NeeEIfcxeTLwADgMiQZkuRhk7KAsH2GzLrUIYMNAmW0MC-ya1-BsIMgcEw4EJZz01Tmsn6HbmN3KL3tiPQIntEH4dXImXqBuDhLM_Xb-o3pCnhPBhbQ8kxd4-YYypctfZt8cCV3J1hPgNOVOFcpT8miNfP_2ZW0Vj-SpVZWUBtN7q9pwFx_OHE_XoFXFaaZCzZPkpNrikNCrqkeXRSVjJcZh2-e61kJNGN5i_PHcPwFe4npo?type=png)](https://mermaid.live/edit#pako:eNptkD1uwzAMha9CaOhkX8BDgTZutqBAkqm2B0KibaH6MSQ6RRDn7mXttkNRTdTj-6gn3pSOhlSlehc_9IiJ4Vy3AeQ8NeeEIfcxeTLwADgMiQZkuRhk7KAsH2GzLrUIYMNAmW0MC-ya1-BsIMgcEw4EJZz01Tmsn6HbmN3KL3tiPQIntEH4dXImXqBuDhLM_Xb-o3pCnhPBhbQ8kxd4-YYypctfZt8cCV3J1hPgNOVOFcpT8miNfP_2ZW0Vj-SpVZWUBtN7q9pwFx_OHE_XoFXFaaZCzZPkpNrikNCrqkeXRSVjJcZh2-e61kJNGN5i_PHcPwFe4npo)
 
 
+
+## How ScyllaDB can help you build a feature store?
+ScyllaDB is a real-time low latency NoSQL database that is best suited for feature stores where you require <10 ms latency consistently, and need peta-byte scalability.
+
+* **Low latency**: ScyllaDB provides 15-30 ms P99 latency consistently. Low latency can speed up training time and leads to fatser model development.
+* **High throughput**: Training requires huge amounts of data and processing large datasets with many millions of operations per second.
+* **Large scale**: ScyllaDB can handle petabytes of data while still providing great performance.
+
+
 # Get started
+
+## Sing up for a ScyllaDB Cloud account
+To complete this project sign up for a free trial account on S[cyllaDB Cloud](https://cloud.scylladb.com/user/signup).
+
+If you prefer to use a self-hosted version of ScyllaDB, [see installation options here](https://www.scylladb.com/download/#open-source) like Docker.
+
 
 ## Prerequisites:
 * cqlsh
 * Python 3.7+
 
 
-## Feature store schema
+## Create table
+Run the `schema.cql` file to create keyspace `feature_store` and table `flight_features`:
+```bash
+cqlsh "node-0.aws_us_east_1.xxxxxxxxx.clusters.scylla.cloud" 9042 -u scylla -p "password" -f schema.cql
+```
+
+Now let's connect to the database and make sure the table is created properly:
+```bash
+cqlsh "node-0.aws_us_east_1.xxxxxxxxx.clusters.scylla.cloud" 9042 -u scylla -p "password"
+
+scylla@cqlsh> DESCRIBE TABLE pet;
+```
 
 ```sql
-create table demo.flight_features(
+create table feature_store.flight_features(
 	FL_DATE TIMESTAMP,
 	OP_CARRIER TEXT,
 	OP_CARRIER_FL_NUM INT,
@@ -50,12 +76,11 @@ create table demo.flight_features(
 );
 ```
 
-## Connect to ScyllaDB and COPY the dataset
+## Import the dataset into ScyllaDB
+```bash
+cqlsh "node-0.aws_us_east_1.xxxxxxxxx.clusters.scylla.cloud" 9042 -u scylla -p "password"
 
-```
-cqlsh "node-0.aws_us_east_1.********.clusters.scylla.cloud" 9042 -u scylla -p "***********"
-
-scylla@cqlsh> COPY demo.flight_features FROM 'flight_dataset.csv';
+scylla@cqlsh> COPY feature_store.flight_features FROM 'flight_dataset.csv';
 ```
 
 This will start ingesting data into your ScyllaDB instance:
@@ -69,8 +94,9 @@ op_carrier_fl_num|actual_elapsed_time|air_time|arr_delay|arr_time|cancellation_c
              2731|              158.0|   146.0|    -19.0|  1911.0|                 |      0.0|             |        1930|        1800|           160.0|     -8.0|  1800.0|MSP |   842.0|     0.0|2018-12-31 02:00:00|                   |         |WN        |PVD   |              |    7.0|     7.0|             |    1807.0|   1904.0|
 ```
 
-### Decision tree classification
+Now that you have some sample data to play with, let's see a decision tree example.
 
+## Decision tree classification
 Create a new virtual environment and activate it:
 ```bash
 virtualenv env
@@ -184,5 +210,9 @@ graph = pydotplus.graph_from_dot_data(dot_data.getvalue())
 graph.write_png('flight_delayed.png')
 Image(graph.create_png())
 ```
+
+
+## Jupyter notebook
+
 
 
