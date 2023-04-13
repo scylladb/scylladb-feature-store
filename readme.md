@@ -19,18 +19,18 @@ This example project demonstrates a machine learning feature store use case for 
 
 You'll set up a database with flight feature data and use ScyllaDB to analyze flight delays.
 
-## Sing up for a ScyllaDB Cloud account
-To complete this project sign up for a free trial account on S[cyllaDB Cloud](https://cloud.scylladb.com/user/signup).
+## Sign up for a ScyllaDB Cloud account
+To complete this project, sign up for a free trial account on [ScyllaDB Cloud](https://cloud.scylladb.com/user/signup). This is the easiest way to start using ScyllaDB.
 
-If you prefer to use a self-hosted version of ScyllaDB, [see installation options here](https://www.scylladb.com/download/#open-source) like Docker.
+If you prefer to use a self-hosted version of ScyllaDB, [see installation options here](https://www.scylladb.com/download/#open-source) (e.g. Docker).
 
 
 ## Prerequisites:
-* cqlsh
-* Python 3.7+
+* [cqlsh](https://pypi.org/project/cqlsh/)
+* [Python 3.7+](https://www.python.org/downloads/)
 
 
-## Create table
+## Data model
 Run the `schema.cql` file to create keyspace `feature_store` and table `flight_features`:
 ```bash
 cqlsh "node-0.aws_us_east_1.xxxxxxxxx.clusters.scylla.cloud" 9042 -u scylla -p "password" -f schema.cql
