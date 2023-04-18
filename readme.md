@@ -213,5 +213,3 @@ Image(graph.create_png())
 
 ## Jupyter notebook
 You can run and modify the classifier script using the Jupyter notebook file in the repository. Before running it locally, make sure to edit the `config.py` file with your proper (local or ScyllaDB Cloud) ScyllaDB configuration.
-
-You can also run the classifier in notebook form using [GitHub code editor](https://github.dev/scylladb/scylladb-feature-store/blob/master/decision_tree.ipynb).
