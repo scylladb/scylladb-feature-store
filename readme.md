@@ -99,7 +99,7 @@ Now that you have some sample data to play with, let's see a decision tree examp
 Create a new virtual environment and activate it:
 ```bash
 virtualenv env
-source env/bi/activate
+source env/bin/activate
 ```
 
 Install requirements:
