@@ -107,6 +107,8 @@ Install requirements:
 pip install scikit-learn pandas scylla-driver
 ```
 
+> To follow the code examples below you can either create a new python file or just use the Jupyter notebook that's in the repo. If you use the notebook make sure the edit the `config.py` file with your credentials.
+
 Connect to ScyllaDB:
 ```python
 import pandas as pd
