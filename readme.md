@@ -19,6 +19,11 @@ This example project demonstrates a machine learning feature store use case for 
 
 You'll set up a database with flight feature data and use ScyllaDB to analyze flight delays.
 
+## Clone the repository
+```bash
+git clone https://github.com/scylladb/scylladb-feature-store.git
+```
+
 ## Sign up for a ScyllaDB Cloud account
 To complete this project, sign up for a free trial account on [ScyllaDB Cloud](https://cloud.scylladb.com/user/signup). This is the easiest way to start using ScyllaDB.
 
@@ -36,13 +41,7 @@ Run the `schema.cql` file to create keyspace `feature_store` and table `flight_f
 cqlsh "node-0.aws_us_east_1.xxxxxxxxx.clusters.scylla.cloud" 9042 -u scylla -p "password" -f schema.cql
 ```
 
-Now let's connect to the database and make sure the table is created properly:
-```bash
-cqlsh "node-0.aws_us_east_1.xxxxxxxxx.clusters.scylla.cloud" 9042 -u scylla -p "password"
-
-scylla@cqlsh> DESCRIBE TABLE pet;
-```
-
+This creates the following table in your database:
 ```sql
 create table feature_store.flight_features(
 	FL_DATE TIMESTAMP,
@@ -80,7 +79,7 @@ create table feature_store.flight_features(
 ```bash
 cqlsh "node-0.aws_us_east_1.xxxxxxxxx.clusters.scylla.cloud" 9042 -u scylla -p "password"
 
-scylla@cqlsh> COPY feature_store.flight_features FROM 'flight_dataset.csv';
+scylla@cqlsh> COPY feature_store.flight_features FROM 'flight_features.csv';
 ```
 
 This will start ingesting data into your ScyllaDB instance:
