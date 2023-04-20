@@ -195,20 +195,77 @@ print("Accuracy:",metrics.accuracy_score(y_test, y_pred))
 Accuracy: 0.052884615384615384
 ```
 
-Decision tree visualization:
+Decision tree visualization in text form
 ```python
-from sklearn.tree import export_graphviz
-from six import StringIO  
-from IPython.display import Image  
-import pydotplus
+from sklearn.tree import export_text
 
-dot_data = StringIO()
-export_graphviz(clf, out_file=dot_data,  
-                filled=True, rounded=True,
-                special_characters=True,feature_names = feature_cols,class_names=['0','1'])
-graph = pydotplus.graph_from_dot_data(dot_data.getvalue())  
-graph.write_png('flight_delayed.png')
-Image(graph.create_png())
+tree_rules = export_text(clf, feature_names=feature_cols)
+print(tree_rules)
+```
+
+```text
+|   |   |   |   |--- taxi_in >  5.50
+|   |   |   |   |   |--- crs_arr_time <= 1307.50
+|   |   |   |   |   |   |--- crs_dep_time <= 514.00
+|   |   |   |   |   |   |   |--- dep_time <= 501.00
+|   |   |   |   |   |   |   |   |--- dep_time <= 272.50
+|   |   |   |   |   |   |   |   |   |--- class: 14.0
+|   |   |   |   |   |   |   |   |--- dep_time >  272.50
+|   |   |   |   |   |   |   |   |   |--- class: -5.0
+|   |   |   |   |   |   |   |--- dep_time >  501.00
+|   |   |   |   |   |   |   |   |--- class: -3.0
+|   |   |   |   |   |   |--- crs_dep_time >  514.00
+|   |   |   |   |   |   |   |--- wheels_off <= 553.50
+|   |   |   |   |   |   |   |   |--- crs_dep_time <= 536.50
+|   |   |   |   |   |   |   |   |   |--- wheels_on <= 745.50
+|   |   |   |   |   |   |   |   |   |   |--- air_time <= 55.00
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 6.0
+|   |   |   |   |   |   |   |   |   |   |--- air_time >  55.00
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 3
+|   |   |   |   |   |   |   |   |   |--- wheels_on >  745.50
+|   |   |   |   |   |   |   |   |   |   |--- class: -2.0
+|   |   |   |   |   |   |   |   |--- crs_dep_time >  536.50
+|   |   |   |   |   |   |   |   |   |--- class: -6.0
+|   |   |   |   |   |   |   |--- wheels_off >  553.50
+|   |   |   |   |   |   |   |   |--- wheels_on <= 1257.00
+|   |   |   |   |   |   |   |   |   |--- taxi_out <= 12.50
+|   |   |   |   |   |   |   |   |   |   |--- arr_delay <= -2.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 5
+|   |   |   |   |   |   |   |   |   |   |--- arr_delay >  -2.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 6
+|   |   |   |   |   |   |   |   |   |--- taxi_out >  12.50
+|   |   |   |   |   |   |   |   |   |   |--- crs_elapsed_time <= 271.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 11
+|   |   |   |   |   |   |   |   |   |   |--- crs_elapsed_time >  271.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |--- wheels_on >  1257.00
+|   |   |   |   |   |   |   |   |   |--- class: 3.0
+|   |   |   |   |   |--- crs_arr_time >  1307.50
+|   |   |   |   |   |   |--- crs_dep_time <= 1746.00
+|   |   |   |   |   |   |   |--- taxi_out <= 16.50
+|   |   |   |   |   |   |   |   |--- crs_arr_time <= 1349.50
+|   |   |   |   |   |   |   |   |   |--- arr_delay <= -5.00
+|   |   |   |   |   |   |   |   |   |   |--- class: 9.0
+|   |   |   |   |   |   |   |   |   |--- arr_delay >  -5.00
+|   |   |   |   |   |   |   |   |   |   |--- actual_elapsed_time <= 100.50
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 10.0
+|   |   |   |   |   |   |   |   |   |   |--- actual_elapsed_time >  100.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 4
+|   |   |   |   |   |   |   |   |--- crs_arr_time >  1349.50
+|   |   |   |   |   |   |   |   |   |--- wheels_on <= 1337.50
+|   |   |   |   |   |   |   |   |   |   |--- class: -2.0
+|   |   |   |   |   |   |   |   |   |--- wheels_on >  1337.50
+|   |   |   |   |   |   |   |   |   |   |--- taxi_in <= 15.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 13
+|   |   |   |   |   |   |   |   |   |   |--- taxi_in >  15.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 6
+|   |   |   |   |   |   |   |--- taxi_out >  16.50
+|   |   |   |   |   |   |   |   |--- crs_dep_time <= 1521.50
+|   |   |   |   |   |   |   |   |   |--- crs_dep_time <= 1105.00
+|   |   |   |   |   |   |   |   |   |   |--- actual_elapsed_time <= 175.50
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 5.0
+|   |   |   |   |   |   |   |   |   |   |--- actual_elapsed_time >  175.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 3
 ```
 
 ## Jupyter notebook
