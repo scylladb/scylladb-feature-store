@@ -58,7 +58,8 @@
 
    Getting Started with feature stores <getting-started>
    Design and Data Model <design-and-data-model>
-   Care-Pet GitHub Repository <https://github.com/scylladb/scylladb-feature-store>
+   Feature store GitHub Repository <https://github.com/scylladb/scylladb-feature-store>
+
 
 
 
