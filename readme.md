@@ -271,3 +271,29 @@ print(tree_rules)
 
 ## Jupyter notebook
 You can run and modify the classifier script using the Jupyter notebook file in the repository. Before running it locally, make sure to edit the `config.py` file with your proper (local or ScyllaDB Cloud) ScyllaDB configuration.
+
+
+## Feature store using a narrow table design
+In the initial example, a table was created with each feature stored in its
+individual column. However, this approach becomes less efficient in
+practical scenarios, particularly when dealing with a large number of features.
+Adding numerous columns to the table becomes cumbersome and impractical.
+
+Now let's implement a feature store that uses narrow table design. Instead of
+storing feature in individual columns, you'll store features in individual row.
+
+## Feature store schema with a narrow table design
+
+```sql
+create table feature_store.flight_features_narrow (
+	OP_CARRIER_FL_NUM INT,
+	FL_DATE TIMESTAMP,
+	FEATURE_NAME TEXT,
+	FEATURE_VALUE FLOAT,
+	PRIMARY KEY (OP_CARRIER_FL_NUM)
+)
+```
+
+This design allows you to easily add or remove features in the future without
+changing the schema.
+
