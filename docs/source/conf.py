@@ -34,7 +34,7 @@ extensions = [
     "sphinx_sitemap",
     "sphinx_scylladb_theme",
     "sphinx_multiversion",  # optional
-    "recommonmark",  # optional
+    "myst_parser", # optional
 ]
 
 # The suffix(es) of source filenames.
@@ -44,7 +44,7 @@ source_suffix = [".rst", ".md"]
 master_doc = "index"
 
 # General information about the project.
-project = "ScyllaDB Sphinx Theme"
+project = "ScyllaDB Feature Store"
 copyright = str(date.today().year) + ", ScyllaDB. All rights reserved."
 author = u"ScyllaDB Project Contributors"
 
@@ -101,9 +101,9 @@ html_theme_path = ["../.."]
 html_theme_options = {
     "conf_py_path": "docs/source/",
     "hide_edit_this_page_button": "false",
-    "github_issues_repository": "scylladb/sphinx-scylladb-theme",
-    "github_repository": "scylladb/sphinx-scylladb-theme",
-    "site_description": "Sphinx Theme for ScyllaDB projects.",
+    "github_issues_repository": "scylladb/scylladb-feature-store",
+    "github_repository": "scylladb/scylladb-feature-store",
+    "site_description": "ScyllaDB Feature Store.",
     "hide_version_dropdown": ["master"],
     "versions_unstable": UNSTABLE_VERSIONS,
     "versions_deprecated": DEPRECATED_VERSIONS,
