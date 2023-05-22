@@ -31,7 +31,7 @@
 
 .. topic-box::
   :title: About feature stores
-  :link: design-and-data-model
+  :link: about-feature-stores
   :icon: scylla-icon scylla-icon--overview
   :class: large-4
   :anchor: Learn more
@@ -46,6 +46,15 @@
   :anchor: Get Started
 
   Implement a decision tree algorithm with Python and ScyllaDB as the feature store.
+
+.. topic-box::
+  :title: Design and data model
+  :link: design-and-data-model
+  :icon: scylla-icon scylla-icon--overview
+  :class: large-4
+  :anchor: Learn more
+
+  Learn more about machine learning feature stores and how you can incorporate ScyllaDB in your infrastructure.
 
 
 .. raw:: html
