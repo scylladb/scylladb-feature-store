@@ -56,9 +56,10 @@
    :maxdepth: 3
    :hidden:
 
-   Getting Started with feature stores <getting-started>
-   Design and Data Model <design-and-data-model>
-   Feature store GitHub Repository <https://github.com/scylladb/scylladb-feature-store>
+   About feature stores <about-feature-stores>
+   Getting started <getting-started>
+   Design and data model <design-and-data-model>
+   Feature store GitHub repository <https://github.com/scylladb/scylladb-feature-store>
 
 
 
