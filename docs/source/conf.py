@@ -95,6 +95,10 @@ smv_outputdir_format = "{ref.name}"
 html_theme = "sphinx_scylladb_theme"
 html_theme_path = ["../.."]
 
+# A list of paths that contain custom static files. 
+# They are copied to the output’s _static directory.
+html_static_path = ["_static"]
+
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for the theme, see the
 # documentation.

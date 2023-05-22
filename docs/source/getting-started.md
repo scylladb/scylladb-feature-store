@@ -61,6 +61,7 @@ create table feature_store.flight_features(
 );
 ```
 
+
 ## Import the dataset into ScyllaDB
 ```bash
 cqlsh "node-0.aws_us_east_1.xxxxxxxxx.clusters.scylla.cloud" 9042 -u scylla -p "password"

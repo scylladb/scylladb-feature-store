@@ -10,7 +10,7 @@
 
 .. hero-box::
   :title: Build a feature store with ScyllaDB
-  :image: /_static/img/mascots/scylla-care-pet-mascot.svg
+  :image: /_static/img/scylla-cloud-mascot.png
   :button_icon: fa fa-github
   :button_url: https://github.com/scylladb/scylladb-feature-store
   :button_text: Feature store repository
@@ -47,15 +47,6 @@
 
   Implement a decision tree algorithm with Python and ScyllaDB as the feature store.
 
-.. topic-box::
-  :title: Design and data model
-  :link: design-and-data-model
-  :icon: scylla-icon scylla-icon--overview
-  :class: large-4
-  :anchor: Learn more
-
-  Learn more about machine learning feature stores and how you can incorporate ScyllaDB in your infrastructure.
-
 
 .. raw:: html
 
@@ -67,7 +58,6 @@
 
    About feature stores <about-feature-stores>
    Getting started <getting-started>
-   Design and data model <design-and-data-model>
    Feature store GitHub repository <https://github.com/scylladb/scylladb-feature-store>
 
 
