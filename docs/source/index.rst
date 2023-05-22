@@ -10,7 +10,7 @@
 
 .. hero-box::
   :title: Build a feature store with ScyllaDB
-  :image: /_static/img/mascots/scylla-care-pet-mascot.svg
+  :image: /_static/img/scylla-cloud-mascot.png
   :button_icon: fa fa-github
   :button_url: https://github.com/scylladb/scylladb-feature-store
   :button_text: Feature store repository
