@@ -107,7 +107,7 @@ html_theme_options = {
     "hide_edit_this_page_button": "false",
     "github_issues_repository": "scylladb/scylladb-feature-store",
     "github_repository": "scylladb/scylladb-feature-store",
-    "site_description": " ScyllaDB feature store example.",
+    "site_description": "ScyllaDB feature store example.",
     "hide_version_dropdown": ["master"],
     "versions_unstable": UNSTABLE_VERSIONS,
     "versions_deprecated": DEPRECATED_VERSIONS,
