@@ -105,9 +105,9 @@ html_static_path = ["_static"]
 html_theme_options = {
     "conf_py_path": "docs/source/",
     "hide_edit_this_page_button": "false",
-    "github_issues_repository": "scylladb/sphinx-scylladb-theme",
-    "github_repository": "scylladb/sphinx-scylladb-theme",
-    "site_description": "Sphinx Theme for ScyllaDB projects.",
+    "github_issues_repository": "scylladb/scylladb-feature-store",
+    "github_repository": "scylladb/scylladb-feature-store",
+    "site_description": "ScyllaDB feature store example.",
     "hide_version_dropdown": ["master"],
     "versions_unstable": UNSTABLE_VERSIONS,
     "versions_deprecated": DEPRECATED_VERSIONS,
