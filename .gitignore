@@ -1,2 +1,3 @@
-docs/_build
-docs/poetry.lock
+/docs/poetry.lock
+/docs/_build
+/source/.doctrees

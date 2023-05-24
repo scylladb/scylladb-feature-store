@@ -44,7 +44,7 @@ source_suffix = [".rst", ".md"]
 master_doc = "index"
 
 # General information about the project.
-project = "ScyllaDB Feature Store"
+project = "ScyllaDB feature store example"
 copyright = str(date.today().year) + ", ScyllaDB. All rights reserved."
 author = u"ScyllaDB Project Contributors"
 
@@ -95,6 +95,10 @@ smv_outputdir_format = "{ref.name}"
 html_theme = "sphinx_scylladb_theme"
 html_theme_path = ["../.."]
 
+# A list of paths that contain custom static files. 
+# They are copied to the output’s _static directory.
+html_static_path = ["_static"]
+
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for the theme, see the
 # documentation.
@@ -103,7 +107,7 @@ html_theme_options = {
     "hide_edit_this_page_button": "false",
     "github_issues_repository": "scylladb/scylladb-feature-store",
     "github_repository": "scylladb/scylladb-feature-store",
-    "site_description": "ScyllaDB Feature Store.",
+    "site_description": "ScyllaDB feature store example.",
     "hide_version_dropdown": ["master"],
     "versions_unstable": UNSTABLE_VERSIONS,
     "versions_deprecated": DEPRECATED_VERSIONS,
