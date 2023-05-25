@@ -39,11 +39,11 @@
   Learn more about machine learning feature stores and how you can incorporate ScyllaDB in your infrastructure.
 
 .. topic-box::
-  :title: Getting Started
+  :title: Getting started
   :link: getting-started
   :icon: scylla-icon scylla-icon--getting-started
   :class: large-4
-  :anchor: Get Started
+  :anchor: Get started
 
   Implement a decision tree algorithm with Python and ScyllaDB as the feature store.
 
