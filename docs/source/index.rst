@@ -47,6 +47,15 @@
 
   Implement a decision tree algorithm with Python and ScyllaDB as the feature store.
 
+.. topic-box::
+  :title: Data model
+  :link: data-model
+  :icon: scylla-icon scylla-icon--database
+  :class: large-4
+  :anchor: Learn more
+
+  Create the database schema for your feature store. Examples show you both a
+  narrow and a wide table design. 
 
 .. raw:: html
 
@@ -58,6 +67,7 @@
 
    About feature stores <about-feature-stores>
    Getting started <getting-started>
+   Data model <data-model>
    Feature store GitHub repository <https://github.com/scylladb/scylladb-feature-store>
 
 
