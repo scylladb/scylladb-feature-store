@@ -50,7 +50,7 @@
 .. topic-box::
   :title: Data model
   :link: data-model
-  :icon: scylla-icon scylla-icon--database
+  :icon: scylla-icon scylla-icon--circe
   :class: large-4
   :anchor: Learn more
 
