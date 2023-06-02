@@ -34,7 +34,7 @@ extensions = [
     "sphinx_sitemap",
     "sphinx_scylladb_theme",
     "sphinx_multiversion",  # optional
-    "recommonmark",  # optional
+    "myst_parser", # optional
 ]
 
 # The suffix(es) of source filenames.

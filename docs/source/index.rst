@@ -69,8 +69,3 @@
    Getting started <getting-started>
    Data model <data-model>
    Feature store GitHub repository <https://github.com/scylladb/scylladb-feature-store>
-
-
-
-
-
