@@ -105,6 +105,7 @@ html_static_path = ["_static"]
 html_theme_options = {
     "conf_py_path": "docs/source/",
     "hide_edit_this_page_button": "false",
+    "hide_feedback_buttons": "false",
     "github_issues_repository": "scylladb/scylladb-feature-store",
     "github_repository": "scylladb/scylladb-feature-store",
     "site_description": "ScyllaDB feature store example.",
