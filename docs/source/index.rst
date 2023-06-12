@@ -57,6 +57,15 @@
   Create the database schema for your feature store. Examples show you both a
   narrow and a wide table design. 
 
+.. topic-box::
+  :title: Feast + ScyllaDB
+  :link: feast-scylladb-online-store
+  :icon: scylla-icon scylla-icon--circe
+  :class: large-4
+  :anchor: Integrate with Feast
+
+  Feast is an open-source feature store for production ML. Learn how you can use ScyllaDB with Feast.
+
 .. raw:: html
 
   </div></div></div>
@@ -68,6 +77,7 @@
    About feature stores <about-feature-stores>
    Getting started <getting-started>
    Data model <data-model>
+   Feast + ScyllaDB <feast-scylladb-online-store>
    Feature store GitHub repository <https://github.com/scylladb/scylladb-feature-store>
 
 
