@@ -1,5 +1,5 @@
 # Integrate ScyllaDB and Feast
-Feast is a popular open-source feature store for production ML. You can use several online stores when using Feast, including ScyllaDB. ScyllaDB, a low-latency and high-performance database, serves perfectly as an online store. In this section, you'll see how you can integrate your ScyllaDB Cloud database into Feast as an online store.
+[Feast](https://feast.dev/) is a popular open-source feature store for production ML. You can use several online stores when using Feast, including ScyllaDB. ScyllaDB, a low-latency and high-performance database, serves perfectly as an online store. In this section, you'll see how you can integrate your ScyllaDB Cloud database into Feast as an online store.
 
 If you want to learn more about Feast, head to the [Feast documentation](https://docs.feast.dev/).
 
