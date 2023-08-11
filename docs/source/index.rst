@@ -79,8 +79,3 @@
    Data model <data-model>
    Feast + ScyllaDB <feast-scylladb-online-store>
    Feature store GitHub repository <https://github.com/scylladb/scylladb-feature-store>
-
-
-
-
-
