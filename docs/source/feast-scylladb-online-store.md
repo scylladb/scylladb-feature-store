@@ -22,3 +22,5 @@ online_store:
     password: password
 
 ```
+
+For more information, read the [Feast documentation](https://docs.feast.dev/v/master/reference/online-stores/scylladb).
