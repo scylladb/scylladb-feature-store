@@ -11,6 +11,7 @@ ScyllaDB is a real-time high-throughput NoSQL database that is best suited for f
 * **High-throughput**: Training requires huge amounts of data and processing large datasets with many millions of operations per second - something that ScyllaDB excels at.
 * **Large-scale**: ScyllaDB can handle petabytes of data while still providing great performance.
 
+Read how [Medium is using ScyllaDB](https://medium.engineering/scylladb-implementation-lists-in-mediums-feature-store-part-2-905299c89392) as a feature store.
 
 # Get started
 

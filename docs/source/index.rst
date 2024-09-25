@@ -66,6 +66,15 @@
 
   Feast is an open-source feature store for production ML. Learn how you can use ScyllaDB with Feast.
 
+.. topic-box::
+  :title: How Medium is using ScyllaDB for feature stores
+  :link: https://medium.engineering/scylladb-implementation-lists-in-mediums-feature-store-part-2-905299c89392
+  :icon: scylla-icon scylla-icon--circe
+  :class: large-4
+  :anchor: Read more
+
+  Learn how Medium is using ScyllaDB to build a fast and scalable feature store.
+
 .. raw:: html
 
   </div></div></div>
