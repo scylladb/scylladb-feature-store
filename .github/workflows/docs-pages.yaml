@@ -6,9 +6,9 @@ on:
   push:
     branches:
       - master
+      - 'branch-**'
     paths:
       - "docs/**"
-      - 'branch-**'
   workflow_dispatch:
 
 jobs:
@@ -21,7 +21,6 @@ jobs:
           ref: ${{ github.event.repository.default_branch }}
           persist-credentials: false
           fetch-depth: 0
-
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
@@ -45,7 +44,7 @@ jobs:
             .
 
       - name: Upload artifact
-        uses: actions/upload-artifact@main
+        uses: actions/upload-artifact@v4.4.0
         with:
           name: github-pages
           path: ${{ runner.temp }}/artifact.tar
@@ -71,4 +70,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v1
+        uses: actions/deploy-pages@v4
