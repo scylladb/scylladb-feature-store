@@ -10,10 +10,10 @@
 
 .. hero-box::
   :title: Build a feature store with ScyllaDB
-  :image: /_static/img/scylla-cloud-mascot.png
-  :button_icon: fa fa-github
+  :image: /_static/img/mascots-2/cloud.svg
+  :button_icon: icon-github
   :button_url: https://github.com/scylladb/scylladb-feature-store
-  :button_text: Feature store repository
+  :button_text: Source code
 
   This tutorial walks you through a sample feature store application with ScyllaDB Cloud.
   After completing the project, you will be able to incorporate ScyllaDB as a
@@ -32,7 +32,7 @@
 .. topic-box::
   :title: About feature stores
   :link: about-feature-stores
-  :icon: scylla-icon scylla-icon--overview
+  :icon: icon-docs-monitoring
   :class: large-4
   :anchor: Learn more
 
@@ -41,7 +41,7 @@
 .. topic-box::
   :title: Getting started
   :link: getting-started
-  :icon: scylla-icon scylla-icon--getting-started
+  :icon: icon-docs-getting-started
   :class: large-4
   :anchor: Get started
 
@@ -50,7 +50,7 @@
 .. topic-box::
   :title: Data model
   :link: data-model
-  :icon: scylla-icon scylla-icon--circe
+  :icon: icon-docs-manager
   :class: large-4
   :anchor: Learn more
 
@@ -60,7 +60,7 @@
 .. topic-box::
   :title: Feast + ScyllaDB
   :link: feast-scylladb-online-store
-  :icon: scylla-icon scylla-icon--circe
+  :icon: icon-docs-manager
   :class: large-4
   :anchor: Integrate with Feast
 
@@ -69,7 +69,7 @@
 .. topic-box::
   :title: How Medium is using ScyllaDB for feature stores
   :link: https://medium.engineering/scylladb-implementation-lists-in-mediums-feature-store-part-2-905299c89392
-  :icon: scylla-icon scylla-icon--circe
+  :icon: icon-docs-blog
   :class: large-4
   :anchor: Read more
 
