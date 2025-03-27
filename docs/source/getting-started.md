@@ -1,9 +1,7 @@
-# Get started
-
-## ScyllaDB feature store example (online storage)
+# ScyllaDB for training data
 This example project demonstrates a machine learning feature store use case for ScyllaDB.
 
-You'll set up a database with flight feature data and use ScyllaDB to analyze flight delays.
+You'll set up a database with flight feature data and use ScyllaDB to train a model using decision tree classification.
 
 ## Clone the repository
 ```bash
@@ -261,4 +259,21 @@ You can run and modify the classifier script using the Jupyter notebook file in 
 
 
 ## Narrow table design
-In the example above, we use a wide table design
+
+Here's an example table definiton that uses narrow table design:
+```sql
+create table feature_store.flight_features_narrow (
+	OP_CARRIER_FL_NUM INT,
+	FL_DATE TIMESTAMP,
+	FEATURE_NAME TEXT,
+	FEATURE_VALUE FLOAT,
+	PRIMARY KEY (OP_CARRIER_FL_NUM)
+)
+```
+
+In this example, you see just a few columns in the table. Aside from the
+`OP_CARRIER_FL_NUM` and `FL_DATE` columns, which are specific to this example use case, 
+the two other columns are general feature columns that can be used to store
+any number of different features in just two columns. This type of design is
+more flexible and requires no schema changes in case of adding or removing features
+from the database.
