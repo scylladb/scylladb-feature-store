@@ -17,9 +17,10 @@ ScyllaDB is a real-time NoSQL database that is best suited for feature store use
 
 * **Low-latency**: ScyllaDB can provide <1 ms P99 latency. For real-time machine learning apps, an online feature store is required to meet strict latency requirements. ScyllaDB is an excellent choice for an online store (Read how [Medium is using ScyllaDB](https://medium.engineering/scylladb-implementation-lists-in-mediums-feature-store-part-2-905299c89392) as a feature store.)
 * **High-throughput**: Training requires querying huge amounts of data and processing large datasets with possibly millions of operations per second - something that ScyllaDB excels at.
-* **Large-scale**: ScyllaDB can handle petabytes of data while still keeping latency low and predictable great performance.
-* **High availability**: ScyllaDB is a highly available database. With its distributed architecture, ScyllaDB is capable of keeping your machine learning infrastructure always up and running no matter what
+* **Large-scale**: ScyllaDB can handle petabytes of data while still keeping latency low and predictable.
+* **High availability**: ScyllaDB is a highly available database. With its distributed architecture, ScyllaDB keeps your feature store database always up and running.
 * **Easy to migration**: ScyllaDB is compatible with DynamoDB API and Cassandra which means it's simple to migrate over from legacy solutions.
+* **Integration with Feast**: ScyllaDB is compatible with DynamoDB API and Cassandra which means it's simple to migrate over from legacy solutions.
 
 
 
