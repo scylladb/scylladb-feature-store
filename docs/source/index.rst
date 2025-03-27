@@ -8,16 +8,17 @@
 
 .. title:: Scylla feature store example
 
+
 .. hero-box::
-  :title: Build a feature store with ScyllaDB
+  :title: ScyllaDB online feature store
   :image: /_static/img/mascots-2/cloud.svg
   :button_icon: icon-github
   :button_url: https://github.com/scylladb/scylladb-feature-store
   :button_text: Source code
 
-  This tutorial walks you through a sample feature store application with ScyllaDB Cloud.
-  After completing the project, you will be able to incorporate ScyllaDB as a
-  feature store into your machine learning architecture.
+  This tutorial walks you through a sample online feature store application with ScyllaDB Cloud.
+  After completing the project, you will be able to use ScyllaDB as a
+  feature store and integrate it with the Feast framework.
 
 .. raw:: html
 
@@ -30,16 +31,25 @@
   <div class="grid-x grid-margin-x">
 
 .. topic-box::
-  :title: About feature stores
+  :title: Why ScyllaDB for feature stores?
   :link: about-feature-stores
   :icon: icon-docs-monitoring
   :class: large-4
   :anchor: Learn more
 
-  Learn more about machine learning feature stores and how you can incorporate ScyllaDB in your infrastructure.
+  Learn more about feature stores and why you should consider adding ScyllaDB in your machine learning architecture.
 
 .. topic-box::
-  :title: Getting started
+  :title: Credit scoring app with Feast
+  :link: credit-scoring-app
+  :icon: icon-docs-monitoring
+  :class: large-4
+  :anchor: Get started
+
+  Build a real-time credit scoring app. ScyllaDB is used as the online store within the Feast feature store framework.
+
+.. topic-box::
+  :title: ScyllaDB for training data
   :link: getting-started
   :icon: icon-docs-getting-started
   :class: large-4
@@ -48,21 +58,11 @@
   Implement a decision tree algorithm with Python and ScyllaDB as the feature store.
 
 .. topic-box::
-  :title: Data model
-  :link: data-model
-  :icon: icon-docs-manager
-  :class: large-4
-  :anchor: Learn more
-
-  Create the database schema for your feature store. Examples show you both a
-  narrow and a wide table design. 
-
-.. topic-box::
   :title: Feast + ScyllaDB
   :link: feast-scylladb-online-store
   :icon: icon-docs-manager
   :class: large-4
-  :anchor: Integrate with Feast
+  :anchor: Get started
 
   Feast is an open-source feature store for production ML. Learn how you can use ScyllaDB with Feast.
 
@@ -83,11 +83,11 @@
    :maxdepth: 3
    :hidden:
 
-   About feature stores <about-feature-stores>
-   Getting started <getting-started>
-   Data model <data-model>
+   Why ScyllaDB for feature stores? <about-feature-stores>
+   Build a real-time app <credit-scoring-app>
+   ScyllaDB for training data <getting-started>
    Feast + ScyllaDB <feast-scylladb-online-store>
-   Feature store GitHub repository <https://github.com/scylladb/scylladb-feature-store>
+    GitHub repository <https://github.com/scylladb/scylladb-feature-store>
 
 
 
