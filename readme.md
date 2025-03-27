@@ -1,6 +1,6 @@
 # Real-time credit scoring application with Feast & ScyllaDB
 
-This project is based on [this](https://github.com/feast-dev/feast-aws-credit-scoring-tutorial) existing Feast sample application.
+This repository is based on [this](https://github.com/feast-dev/feast-aws-credit-scoring-tutorial) existing Feast sample application.
 
 ![scylla feast architecture](/docs/source/_static/img/scylla-feast.jpg)
 
