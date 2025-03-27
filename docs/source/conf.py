@@ -12,9 +12,9 @@ sys.path.insert(0, os.path.abspath(".."))
 
 # Builds documentation for the following tags and branches.
 TAGS = []
-BRANCHES = ["master"]
+BRANCHES = ["main"]
 # Sets the latest version.
-LATEST_VERSION = "master"
+LATEST_VERSION = "main"
 # Set which versions are not released yet.
 UNSTABLE_VERSIONS = [""]
 # Set which versions are deprecated
@@ -44,7 +44,7 @@ source_suffix = [".rst", ".md"]
 master_doc = "index"
 
 # General information about the project.
-project = "ScyllaDB feature store example docs"
+project = "Feature Store"
 copyright = str(date.today().year) + ", ScyllaDB. All rights reserved."
 author = u"ScyllaDB Project Contributors"
 
@@ -109,7 +109,7 @@ html_theme_options = {
     "github_issues_repository": "scylladb/scylladb-feature-store",
     "github_repository": "scylladb/scylladb-feature-store",
     "site_description": "ScyllaDB feature store example.",
-    "hide_version_dropdown": ["master"],
+    "hide_version_dropdown": ["main"],
     "versions_unstable": UNSTABLE_VERSIONS,
     "versions_deprecated": DEPRECATED_VERSIONS,
 }

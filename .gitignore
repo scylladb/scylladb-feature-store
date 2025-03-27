@@ -1,2 +1,5 @@
 /docs/_build
 /source/.doctrees
+feature_repo/data/registry.db
+/encoder.bin
+/model.bin
