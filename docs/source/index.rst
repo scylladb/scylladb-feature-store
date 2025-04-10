@@ -15,6 +15,7 @@
   :button_icon: icon-github
   :button_url: https://github.com/scylladb/scylladb-feature-store
   :button_text: Source code
+  :button_style: bold
 
   This tutorial walks you through a sample online feature store application with ScyllaDB Cloud.
   After completing the project, you will be able to use ScyllaDB as a
@@ -33,7 +34,7 @@
 .. topic-box::
   :title: Why ScyllaDB for feature stores?
   :link: about-feature-stores
-  :icon: icon-docs-monitoring
+  :icon: icon-info
   :class: large-4
   :anchor: Learn more
 
@@ -42,7 +43,7 @@
 .. topic-box::
   :title: Credit scoring app with Feast
   :link: credit-scoring-app
-  :icon: icon-docs-monitoring
+  :icon: icon-creditcard
   :class: large-4
   :anchor: Get started
 
@@ -51,7 +52,7 @@
 .. topic-box::
   :title: ScyllaDB for training data
   :link: getting-started
-  :icon: icon-docs-getting-started
+  :icon: icon-database
   :class: large-4
   :anchor: Get started
 
@@ -60,7 +61,7 @@
 .. topic-box::
   :title: Feast + ScyllaDB
   :link: feast-scylladb-online-store
-  :icon: icon-docs-manager
+  :icon: icon-link
   :class: large-4
   :anchor: Get started
 
@@ -69,7 +70,7 @@
 .. topic-box::
   :title: How Medium is using ScyllaDB for feature stores
   :link: https://medium.engineering/scylladb-implementation-lists-in-mediums-feature-store-part-2-905299c89392
-  :icon: icon-docs-blog
+  :icon: icon-edit
   :class: large-4
   :anchor: Read more
 

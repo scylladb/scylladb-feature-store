@@ -33,7 +33,7 @@ In this tutorial, you'll do the following steps:
 
 ## Create ScyllaDB Cloud cluster
 Go to [ScyllaDB Cloud](https://cloud.scylladb.com/) and create a new cluster (either "Free Tial" or "Dedicated VM"). You can use the smallest available machine for this sample app (`t3.micro`)
-![choose machine type](/docs/source/_static/img/choose-machine.png)
+![choose machine type](/_static/img/choose-machine.png)
 
 
 ## Create new keyspace
@@ -44,7 +44,7 @@ cqlsh <SCYLLA-CLOUD-HOST> -u scylla -p <PASSWORD>
 ```
 
 You can get the host address, username, and password from your ScyllaDB Cloud dashboard:
-![scylla connect](/docs/source/_static/img/scylla-cloud-connect.png)
+![scylla connect](/_static/img/scylla-cloud-connect.png)
 
 Create a new keyspace called `feast` in ScyllaDB (this keyspace will be populated by Feast):
 ```
