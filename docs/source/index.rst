@@ -50,6 +50,16 @@
   Build a real-time credit scoring app. ScyllaDB is used as the online store within the Feast feature store framework.
 
 .. topic-box::
+  :title: Used cars price prediction app
+  :link: used-cars-app
+  :icon: icon-maintenance
+  :class: large-4
+  :anchor: Get started
+
+  Build a used car price prediction app. ScyllaDB is used as the online store to serve real-time features.
+
+
+.. topic-box::
   :title: ScyllaDB for training data
   :link: getting-started
   :icon: icon-database
@@ -86,9 +96,10 @@
 
    Why ScyllaDB for feature stores? <about-feature-stores>
    Build a real-time app <credit-scoring-app>
+   Build a price prediction app <used-cars-app>
    ScyllaDB for training data <getting-started>
    Feast + ScyllaDB <feast-scylladb-online-store>
-    GitHub repository <https://github.com/scylladb/scylladb-feature-store>
+   GitHub repository <https://github.com/scylladb/scylladb-feature-store>
 
 
 
