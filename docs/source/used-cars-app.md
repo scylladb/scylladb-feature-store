@@ -44,7 +44,7 @@ docker exec -it node1 cqlsh
 ```
 
 Create a keyspace called `feature_store`:
-```sql
+```
 CREATE KEYSPACE feature_store
 WITH REPLICATION = {
   'class' : 'NetworkTopologyStrategy',
@@ -183,7 +183,7 @@ Connect to your ScyllaDB cluster using cqlsh and create the schema:
 docker exec -it node1 cqlsh
 ```
 
-```sql
+```
 CREATE KEYSPACE IF NOT EXISTS feature_store WITH replication = {
   'class': 'NetworkTopologyStrategy',
   'replication_factor': 1
