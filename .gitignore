@@ -3,3 +3,5 @@
 feature_repo/data/registry.db
 /encoder.bin
 /model.bin
+
+__pycache__/
