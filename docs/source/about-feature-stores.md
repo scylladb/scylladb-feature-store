@@ -1,4 +1,7 @@
 # Why should you consider ScyllaDB as a feature store?
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/s6zUbmVRyK0?si=_onaNvTGpTbjwjD3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ScyllaDB is a real-time NoSQL database that is best suited for feature store use cases where you require **low latency** (e.g. model serving), **high throughout** (e.g. training) and need peta-byte scalability.
 
 Feature store is a central data store to power operational machine learning models. They help you store transformed feature values in a scalable and performant database. Real-time inference requires features to be returned to applications with low latency at scale. This is where ScyllaDB can play a crucial role in your machine learning infrastructure.
