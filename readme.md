@@ -20,7 +20,7 @@ ScyllaDB is a real-time NoSQL database that is best suited for feature store use
 * **Large-scale**: ScyllaDB can handle petabytes of data while still keeping latency low and predictable.
 * **High availability**: ScyllaDB is a highly available database. With its distributed architecture, ScyllaDB keeps your feature store database always up and running.
 * **Easy to migration**: ScyllaDB is compatible with DynamoDB API and Cassandra which means it's simple to migrate over from legacy solutions.
-* **Integration with Feast**: ScyllaDB is compatible with DynamoDB API and Cassandra which means it's simple to migrate over from legacy solutions.
+* **Integration with Feast**: ScyllaDB integrates with the popular open-source feature store framework, Feast.
 
 
 
