@@ -224,5 +224,5 @@ df
 
 # Results of prediction
 st.header("Model prediction:")
-result = predict_price(feature_vectors)
+result = predict_price(feature_vectors)[0]
 st.header(str(int(result)) + " GBP")
