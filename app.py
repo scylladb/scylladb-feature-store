@@ -93,25 +93,3 @@ if result == 0:
 elif result == 1:
     st.error("Your loan has been rejected!")
 
-
-# Feature importance - todo
-    """
-st.header("Feature Importance")
-X = pd.read_parquet("feature_repo/data/training_dataset_sample.parquet")
-explainer = shap.TreeExplainer(model.classifier)
-shap_values = explainer.shap_values(X)
-left, mid, right = st.columns(3)
-with left:
-    plt.title("Feature importance based on SHAP values")
-    print(X.shape)
-    print(shap_values[3].shape)
-    shap.summary_plot(shap_values[1], X)
-    st.set_option("deprecation.showPyplotGlobalUse", False)
-    st.pyplot(bbox_inches="tight")
-    st.write("---")
-
-with mid:
-    plt.title("Feature importance based on SHAP values (Bar)")
-    shap.summary_plot(shap_values, X, plot_type="bar")
-    st.pyplot(bbox_inches="tight")
-    """
