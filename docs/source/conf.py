@@ -34,7 +34,7 @@ extensions = [
     "sphinx_sitemap",
     "sphinx_scylladb_theme",
     "sphinx_multiversion",  # optional
-    "recommonmark",  # optional
+    "myst_parser",  # optional
 ]
 
 # The suffix(es) of source filenames.
@@ -50,7 +50,7 @@ author = u"ScyllaDB Project Contributors"
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
-exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
+exclude_patterns = ["_build", "Thumbs.db", ".DS_Store", ".venv"]
 
 # The name of the Pygments (syntax highlighting) style to use.
 pygments_style = "sphinx"
