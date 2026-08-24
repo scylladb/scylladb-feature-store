@@ -4,12 +4,13 @@ registry: data/registry.db
 # The provider primarily specifies default offline / online stores & storing the registry in a given cloud
 provider: local
 online_store:
-    type: cassandra
+    type: scylladb
     hosts:
-        - node-0.aws-us-east-1.xxxxxxx.clusters.scylla.cloud
-        - node-1.aws-us-east-1.xxxxxxx.clusters.scylla.cloud
-        - node-2.aws-us-east-1.xxxxxxx.clusters.scylla.cloud
+        - node-0.aws_us_east_1.xxxxxxx.clusters.scylla.cloud
+        - node-1.aws_us_east_1.xxxxxxx.clusters.scylla.cloud
+        - node-2.aws_us_east_1.xxxxxxx.clusters.scylla.cloud
     username: scylla
     password: xxxxxxx
     keyspace: feast
-entity_key_serialization_version: 2
+    local_dc: AWS_US_EAST_1
+entity_key_serialization_version: 3

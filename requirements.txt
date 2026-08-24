@@ -1,4 +1,4 @@
-feast[cassandra]
+feast[scylladb]
 pandas
 scikit-learn
 streamlit

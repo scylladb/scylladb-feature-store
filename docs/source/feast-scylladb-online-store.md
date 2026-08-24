@@ -4,35 +4,44 @@
 If you want to learn more about Feast, read the [Feast documentation](https://docs.feast.dev/).
 
 ## Feast + ScyllaDB online store configuration example
-ScyllaDB is Cassandra-compatible which means you can use the built-in Cassandra connector of Feast.
+Feast ships with a native ScyllaDB online store connector, built on the `scylla-driver` Python package.
 
-To set up ScyllaDB as a Feast online store you need to 
+To set up ScyllaDB as a Feast online store you need to
 
-1. Install the Feast + Cassandra connector
+1. Install Feast with the ScyllaDB extra
 1. Edit the Feast configuration file
 
-### Install the Feast + Cassandra connector
+### Install Feast with the ScyllaDB extra
 ```
-pip install feast[cassandra]
+pip install feast[scylladb]
 ```
 
-### Edit the Feast configuration file 
+### Edit the Feast configuration file
 ```yaml
 # feature_store.yaml
 project: repo
 registry: data/registry.db
 provider: local
 online_store:
-    type: cassandra
+    type: scylladb
     hosts:
-        - node-0.aws-us-east-1.xxxxxxx.clusters.scylla.cloud
-        - node-1.aws-us-east-1.xxxxxxx.clusters.scylla.cloud
-        - node-2.aws-us-east-1.xxxxxxx.clusters.scylla.cloud
+        - node-0.aws_us_east_1.xxxxxxx.clusters.scylla.cloud
+        - node-1.aws_us_east_1.xxxxxxx.clusters.scylla.cloud
+        - node-2.aws_us_east_1.xxxxxxx.clusters.scylla.cloud
     username: scylla
     password: xxxxxxx
     keyspace: feast
-entity_key_serialization_version: 2
-
+    local_dc: AWS_US_EAST_1
+entity_key_serialization_version: 3
 ```
 
-For more information, read the [Feast documentation](https://docs.feast.dev/v/master/reference/online-stores/scylladb).
+Key configuration options for the `scylladb` online store:
+* `hosts`: contact-point addresses of your cluster (required)
+* `port`: CQL port (default: `9042`)
+* `keyspace`: target keyspace (default: `feast_keyspace`)
+* `username` / `password`: authentication credentials
+* `local_dc`: datacenter name used for DC-aware load balancing (required for ScyllaDB Cloud, e.g. `AWS_US_EAST_1`)
+* `read_concurrency` / `write_concurrency`: number of concurrent in-flight statements (default: `100` each)
+* `vector_similarity_function`: default similarity function for vector search — `COSINE`, `DOT_PRODUCT`, or `EUCLIDEAN` (default: `COSINE`)
+
+For more information, read the [Feast documentation](https://docs.feast.dev/reference/online-stores/scylladb).
