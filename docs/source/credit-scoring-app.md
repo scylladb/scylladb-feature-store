@@ -2,7 +2,7 @@
 
 This repository is based on [this](https://github.com/feast-dev/feast-aws-credit-scoring-tutorial) existing Feast sample application.
 
-![scylla feast architecture](/_static/img/scylla-feast.jpg)
+![scylla feast architecture](/_static/img/scylla-feast-2.png)
 
 This sample project is a real-time credit scoring application example that shows you how to set up Feast with ScyllaDB Cloud as an online store and parquet files as offline store.
 
