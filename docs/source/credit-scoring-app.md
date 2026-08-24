@@ -59,12 +59,12 @@ virtualenv env && source env/bin/activate
 pip install -r requirements.txt
 ```
 
-Next, configure ScyllaDB Cloud as the online store for Feast. 
+Next, configure ScyllaDB Cloud as the online store for Feast.
 
 > [!TIP]
-> ScyllaDB is compatible with Apache Cassandra so you can use the Feast Cassandra connector with ScyllaDB
+> Feast ships with a native ScyllaDB online store connector, so no extra setup beyond `pip install feast[scylladb]` is required.
 
-Open the feature_store.yaml file and add the host addresses, username (`scylla`), and password for ScyllaDB: 
+Open the feature_store.yaml file and add the host addresses, username (`scylla`), password, and datacenter name for ScyllaDB: 
 
 ```yaml
 project: repo
@@ -73,7 +73,7 @@ registry: data/registry.db
 # The provider primarily specifies default offline / online stores & storing the registry in a given cloud
 provider: local
 online_store:
-    type: cassandra
+    type: scylladb
     hosts:
         - x.x.x.x
         - x.x.x.x
@@ -81,10 +81,11 @@ online_store:
     username: scylla
     password: pass
     keyspace: feast
-entity_key_serialization_version: 2
+    local_dc: AWS_US_EAST_1
+entity_key_serialization_version: 3
 ```
 
-You can get these values from the ScyllaDB Cloud dashboard.
+You can get the host addresses, username, and password from the ScyllaDB Cloud dashboard. `local_dc` should match the datacenter name of your cluster (visible in the ScyllaDB Cloud dashboard).
 
 
 ## Deploy and test the feature store
