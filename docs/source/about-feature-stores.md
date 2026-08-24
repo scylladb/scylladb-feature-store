@@ -17,4 +17,4 @@ What ScyllaDB brings to the table:
 * **Easy to migration**: ScyllaDB is compatible with DynamoDB API and Cassandra which means it's simple to migrate over from legacy solutions.
 * **Integration with Feast**: ScyllaDB integrates well with the popular open-source feature store framework, Feast. Example architecture with Feast and ScyllaDB:
 
-![scylla feast architecture](/_static/img/scylla-feast.jpg)
+![scylla feast architecture](/_static/img/scylla-feast-2.png)
