@@ -32,8 +32,7 @@ In this tutorial, you'll do the following steps:
 1. Deploy and test the feature store
 
 ## Create ScyllaDB Cloud cluster
-Go to [ScyllaDB Cloud](https://cloud.scylladb.com/) and create a new cluster (either "Free Tial" or "Dedicated VM"). You can use the smallest available machine for this sample app (`t3.micro`)
-![choose machine type](/_static/img/choose-machine.png)
+Go to [ScyllaDB Cloud](https://cloud.scylladb.com/) and create a new cluster (either **Free Trial** or **New Cluster** > **Dedicated VM**). Keep the default auto-scaling policy: ScyllaDB Cloud scales the cluster automatically, so you don't need to pick a node size.
 
 
 ## Create new keyspace
